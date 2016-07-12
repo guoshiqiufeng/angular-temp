@@ -1,0 +1,85 @@
+<!-- hbox layout -->
+<div class="hbox hbox-auto-xs bg-light " ng-init="
+  app.settings.asideFixed = true;
+  app.settings.asideDock = false;
+  app.settings.container = false;
+  app.hideAside = false;
+  app.hideFooter = true;"
+     ng-controller="dynamicDemoController as demo">
+  <!-- column -->
+  <div class="col w-lg lt b-r">
+    <div class="vbox">
+      <div class="wrapper">
+        <div class="h4">用户管理</div>
+      </div>
+      <div class="wrapper b-t m-t-xxs">
+        <div class="col-md-6" >
+
+          <div class="brn-group pull-right">
+            <button class="btn btn-default" ng-if="demo.isEditing" ng-click="demo.cancelChanges()">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <button class="btn btn-primary" ng-if="!demo.isEditing" ng-click="demo.isEditing = true">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button class="btn btn-primary" ng-if="demo.isEditing" ng-disabled="!demo.hasChanges() || demo.tableTracker.$invalid" ng-click="demo.saveChanges()">
+              <span class="glyphicon glyphicon-ok"></span>
+            </button>
+            <button class="btn btn-default" ng-click="demo.add()">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </div>
+          <table ng-table-dynamic="demo.tableParams with demo.cols" class="table table-bordered table-condensed table-hover editable-table" ng-form="demo.tableForm" disable-filter="demo.isAdding" demo-tracked-table="demo.tableTracker">
+            <colgroup>
+              <col width="50%" />
+              <col width="22%" />
+              <col width="23%" />
+              <col width="5%" />
+            </colgroup>
+            <tr ng-repeat="row in $data" ng-form="rowForm" demo-tracked-table-row="row">
+              <td ng-repeat="col in $columns" ng-class="rowForm[col.field].$dirty ? 'bg-warning' : ''" ng-form="{{col.field}}" demo-tracked-table-cell>
+                <span ng-if="col.dataType !== 'command' && !demo.isEditing" class="editable-text">{{row[col.field]}}</span>
+                <div ng-if="col.dataType !== 'command' && demo.isEditing" class="controls" ng-class="rowForm[col.field].$invalid && rowForm[col.field].$dirty ? 'has-error' : ''" ng-switch="col.dataType">
+                  <input ng-switch-default type="text" name="{{col.field}}" ng-model="row[col.field]" class="editable-input form-control input-sm" required />
+                  <input ng-switch-when="number" type="number" name="{{col.field}}" ng-model="row[col.field]" class="editable-input form-control input-sm" required />
+                </div>
+                <button ng-if="col.dataType === 'command'" class="btn btn-danger btn-sm" ng-click="demo.del(row)" ng-disabled="!demo.isEditing"><span class="glyphicon glyphicon-trash"></span></button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- /column -->
+
+
+</div>
+<!-- /hbox layout -->
+<style>
+  /** Editable table
+------------------------- */
+
+  .editable-table > tbody > tr > td {
+    padding: 4px
+  }
+  .editable-text {
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+  .editable-table tbody > tr > td > .controls {
+  //width: 100%
+  }
+  .editable-input {
+    padding-left: 3px;
+  }
+  .editable-input.input-sm {
+    height: 30px;
+    font-size: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+</style>

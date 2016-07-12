@@ -1,0 +1,48 @@
+<div class="container w-xl w-auto-xs" ng-init="app.settings.container = false;">
+    <a href class="navbar-brand block m-t">{{app.name}}</a>
+    <div class="m-b-lg">
+        <div class="wrapper text-center">
+            <strong>输入你的邮箱来重置密码</strong>
+        </div>
+        <form name="reset" ng-init="isCollapsed=true">
+            <div class="list-group list-group-sm">
+                <div class="list-group-item">
+                    <input type="email" placeholder="请输入邮箱" ng-model="email" class="form-control no-border" required>
+                </div>
+            </div>
+            <button type="submit" ng-disabled="reset.$invalid" class="btn btn-lg btn-primary btn-block"
+                    ng-click="isCollapsed = !isCollapsed">发送
+            </button>
+        </form>
+        <div collapse="isCollapsed" class="m-t">
+            <div class="alert alert-success">
+                <p>重置链接已发送到您的电子邮件地址，请在7天内点击修改。<br>
+                    <a ui-sref="access.signin" class="btn btn-sm btn-success signin">登录</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center" ng-include="'tpl/blocks/page_footer.html'"></div>
+</div>
+
+<style>
+    @media (min-width: 768px) {
+        .signin {
+             margin-left: 41%;
+        }
+    }
+    @media (max-width: 768px) {
+        .signin {
+            margin-left: 46%;
+        }
+    }
+    @media (max-width: 500px) {
+        .signin {
+            margin-left: 44%;
+        }
+    }
+    @media (max-width: 350px) {
+        .signin {
+            margin-left: 41%;
+        }
+    }
+</style>

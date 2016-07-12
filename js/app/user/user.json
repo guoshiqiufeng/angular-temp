@@ -1,0 +1,47 @@
+{
+  "footer": null,
+  "rows": [
+    {
+      "columAlias": "UserInfo_.",
+      "createBy": "1",
+      "createDate": "2015-11-20",
+      "email": "sys@weizhong.cn",
+      "gif": 1,
+      "id": "1",
+      "ids": null,
+      "lastLoginIp": "0:0:0:0:0:0:0:1",
+      "lastLoginTime": "2016-07-12",
+      "modifiedBy": "1",
+      "modifiedDate": "2016-05-24",
+      "name": "sys",
+      "nickName": "系统管理员",
+      "orderColum": "id",
+      "orderRule": "desc",
+      "page": 1,
+      "pager": {
+        "countTotal": true,
+        "currentPage": 1,
+        "firstResult": 0,
+        "firstResultExt": 0,
+        "order": "",
+        "orderBySetted": false,
+        "orderProperty": "",
+        "pageSize": 20,
+        "records": [],
+        "sort": [],
+        "totalPages": 1,
+        "totalRecords": 0
+      },
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "passwordExpireTime": null,
+      "phone": "13512345623",
+      "resourceIds": null,
+      "rows": 20,
+      "sessionId": null,
+      "status": "1",
+      "tableAlias": "UserInfo_",
+      "totalNum": null
+    }
+  ],
+  "total": 1
+}

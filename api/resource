@@ -1,0 +1,135 @@
+[
+    {
+        "id": "5",
+        "text": "权限管理",
+        "state": "closed",
+        "icon":"glyphicon-th",
+        "children": [
+            {
+                "id": "1",
+                "text": "用户管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"app.user"
+            },
+            {
+                "id": "2",
+                "text": "资源管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            },
+            {
+                "id": "3",
+                "text": "角色管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            },
+            {
+                "id": "4",
+                "text": "组管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            }
+        ],
+        "obj": {},
+        "attributes": {},
+        "checked": ""
+    },
+    {
+        "id": "6",
+        "text": "基础数据",
+        "state": "closed",
+        "icon":"glyphicon-stats",
+        "children": [
+            {
+                "id": "7",
+                "text": "基础参数",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            },
+            {
+                "id": "9",
+                "text": "编码规则",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            }
+        ],
+        "obj": {},
+        "attributes": {},
+        "checked": ""
+    },
+    {
+        "id": "18",
+        "text": "产品管理",
+        "state": "closed",
+        "icon":"glyphicon-th-large",
+        "children": [
+            {
+                "id": "19",
+                "text": "软件管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            },
+            {
+                "id": "20",
+                "text": "反馈信息管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            },
+            {
+                "id": "21",
+                "text": "软件推荐",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            },
+            {
+                "id": "22",
+                "text": "应用评价管理",
+                "state": "",
+                "children": [],
+                "obj": {},
+                "attributes": {},
+                "checked": "",
+                "link":"apps.note"
+            }
+        ],
+        "obj": {},
+        "attributes": {},
+        "checked": ""
+    }
+]
